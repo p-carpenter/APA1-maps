@@ -1,6 +1,6 @@
 // Demonstrating CRUD, iteration, and searching with Objects
 
-const emptyBlankObject = {};
+const emptyBlankObject = {}; // How to define an empty object
 
 const studentObject = {
     "123": { name: "Aqil", programme: "Computer Science" },
