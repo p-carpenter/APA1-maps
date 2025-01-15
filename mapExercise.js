@@ -2,22 +2,33 @@ const catalogue = new Map();
 
 function addBook(bookId, title, author) {
   // TODO: Implement this function to add a book to the catalogue.
+  catalogue.set(bookId, {title: title, author: author});
 }
 
 function findBook(bookId) {
   // TODO: Implement this function to find a book by its ID.
+  return catalogue.get(bookId)
 }
 
 function removeBook(bookId) {
   // TODO: Implement this function to remove a book from the catalogue.
+  catalogue.delete(bookId);
 }
 
 function listAllBooks() {
   // TODO: Implement this function to list all books in the catalogue.
+  catalogue.forEach((book, bookId) => {
+    console.log(`${book.title} by ${book.author} (ID: ${bookId})\n`)
+  })
 }
 
 function numberOfBooks() {
   // TODO: Implement this function to return the number of books in the catalogue.
+  let num = 0;
+  for (book of catalogue.entries()) {
+    num+=1
+  }
+  return num;
 }
 
 // Test the functions
